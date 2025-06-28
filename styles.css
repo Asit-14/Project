@@ -258,46 +258,53 @@ select:focus {
    5. STATS SECTION
    =================================== */
 
-.stats-wrapper {
-  overflow: hidden;
-  background-color: #ede3db;
-  padding: 15px 0;
-  position: relative;
-}
-
-.stats-track {
-  white-space: nowrap;
-}
-
-.stats {
-  display: inline-flex;
-  gap: 60px;
-  animation: marquee 25s linear infinite;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 180px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.stat-icon {
-  font-size: 28px;
-  margin-bottom: 6px;
-}
-
-/* Marquee Animation */
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
+   .stats-wrapper {
+    overflow: hidden;
+    background: #fff;
+    padding: 20px 0;
   }
-  100% {
-    transform: translateX(-100%);
+  
+  .stats-track {
+    width: 100%;
   }
-}
+  
+  .stats {
+    display: flex;
+    gap: 50px;
+    animation: scrollStats 20s linear 1;
+  }
+  
+  .stat {
+    min-width: 200px;
+    text-align: center;
+    flex-shrink: 0;
+    font-family: sans-serif;
+  }
+  
+  .stat-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-value {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: #e67700;
+  }
+  
+  @keyframes scrollStats {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
 
 /* ===================================
    6. TREATMENTS SECTION
@@ -462,7 +469,7 @@ select:focus {
    =================================== */
 
 .choose-section {
-  max-width: 1300px;
+  max-width: 75%;
   margin: auto;
   padding: 15px 20px;
   display: flex;
@@ -476,11 +483,18 @@ select:focus {
   min-width: 300px;
 }
 
-.left-content h2 {
+/* .left-content h2 {
   font-size: 28px;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
+} */
+
+.choose-heading {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
 }
+
 
 .left-content .subtitle {
   font-size: 18px;
@@ -504,6 +518,7 @@ select:focus {
   border-bottom: 1px solid #eee;
 }
 
+
 .feature-text {
   flex: 1;
 }
@@ -517,13 +532,14 @@ select:focus {
 
 .right-image {
   flex: 1;
-  min-width: 300px;
+  min-width: 100px;
 }
 
 .right-image img {
-  width: 100%;
+  width: 60%;
   height: auto;
   border-radius: 20px;
+  margin-top: 20px;
 }
 
 /* ===================================
@@ -659,8 +675,10 @@ select:focus {
 
 .captcha-group input {
   border: none;
-  padding: 12px 20px;
+  padding: 2px 0px;
   flex: 1;
+  text-align: left;
+
 }
 
 .captcha-code {
@@ -669,8 +687,9 @@ select:focus {
   font-weight: bold;
   padding: 14px 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: left;
+  /* align-items: center;
+  justify-content: center; */
   min-width: 80px;
 }
 
@@ -862,11 +881,14 @@ select:focus {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   background-color: #ffe7d9;
   border-top-right-radius: 16px;
   border-bottom-left-radius: 50%;
+  background-image: url(./assets/logo/google.png);
+  background-size: cover;
+
 }
 
 .review-card img {
