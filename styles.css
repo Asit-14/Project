@@ -1,98 +1,152 @@
+/* ===================================
+   CSS STRUCTURE - CLOVE DENTAL WEBSITE
+   ===================================
+   
+   1. GLOBAL STYLES & RESET
+   2. LAYOUT & TYPOGRAPHY
+   3. HEADER SECTION
+   4. HERO SECTION
+   5. STATS SECTION
+   6. TREATMENTS SECTION
+   7. GALLERY SECTION
+   8. WHY CHOOSE SECTION
+   9. TESTIMONIAL SECTION
+   10. FORM SECTIONS
+   11. SAFETY & INNOVATION SECTION
+   12. REVIEWS SECTION
+   13. LOCATION SECTION
+   14. OFFER SECTION
+   15. FAQ SECTION
+   16. FOOTER SECTION
+   17. RESPONSIVE MEDIA QUERIES
+   
+   =================================== */
+
+/* ===================================
+   1. GLOBAL STYLES & RESET
+   =================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  padding: 0%;
-  margin: 0%;
   font-family: "Inter", sans-serif;
   background-color: #fff9f4;
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
-/* Mobile-first responsive design */
-html {
-  scroll-behavior: smooth;
+/* ===================================
+   2. LAYOUT & TYPOGRAPHY
+   =================================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Fix for iOS Safari zoom issue */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  color: #333;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.highlight {
+  color: #f26e21;
+  font-weight: bold;
+}
+
+/* Button Styles */
+.btn-orange {
+  background-color: #f7933a;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e87c1d;
+}
+
+.btn-white {
+  background-color: white;
+  color: #3e1f0f;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: 2px solid #3e1f0f;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+  background-color: #3e1f0f;
+  color: white;
+}
+
+/* Form Input Styles */
 input,
 textarea,
 select {
-  font-size: 16px !important;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-@media (max-width: 767px) {
-  input,
-  textarea,
-  select {
-    font-size: 16px !important;
-    -webkit-appearance: none;
-    appearance: none;
-  }
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #f26e21;
 }
 
-/* Container max-width for large screens */
-@media (min-width: 1200px) {
-  .container,
-  .section {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-/* Tablet specific styles */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .header {
-    padding: 20px 30px;
-  }
-
-  .treatment-card {
-    width: 45%;
-  }
-
-  .card {
-    width: 250px;
-  }
-
-  .testimonial-card {
-    width: 200px;
-  }
-}
-
-/* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .treatment-card img,
-  .patient-card img,
-  .testimonial-card img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
-}
-
-/* Dark mode support (if needed in future) */
-@media (prefers-color-scheme: dark) {
-  /* Dark mode styles can be added here if needed */
-}
-
-/* Reduced motion accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .scrolling-banner,
-  .scrolling-content {
-    animation: none;
-  }
-
-  * {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
+/* ===================================
+   3. HEADER SECTION
+   =================================== */
 
 .header {
   display: flex;
@@ -133,81 +187,86 @@ select {
   align-items: center;
 }
 
-.btn-orange {
-  background-color: #f7933a;
-  color: white;
-  padding: 10px 20px;
-  font-weight: 600;
-  border: none;
-  border-radius: 999px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+/* ===================================
+   4. HERO SECTION
+   =================================== */
 
-.btn-orange:hover {
-  background-color: #e87c1d;
-}
-
-.btn-white {
-  background-color: white;
-  color: #3e1f0f;
-  padding: 10px 20px;
-  font-weight: 600;
-  border: 2px solid #3e1f0f;
-  border-radius: 999px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Hero Section */
 .hero {
   display: flex;
   padding: 20px;
-  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
 }
 
-.hero img {
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
   width: 100%;
-  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 .appointment-form {
   background-color: #f8f8f8;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 12px;
   width: 100%;
   max-width: 400px;
-  padding-left: 100px;
 }
 
-.appointment-form input,
+.appointment-form h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.appointment-form p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.appointment-form input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .appointment-form button {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.appointment-form button {
-  background-color: #ff9900;
+  background-color: #f26e21;
   color: white;
   border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Stats */
+.appointment-form button:hover {
+  background-color: #e55a0d;
+}
+
+.disclaimer {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+}
+
+/* ===================================
+   5. STATS SECTION
+   =================================== */
+
 .stats-wrapper {
   overflow: hidden;
-  white-space: nowrap;
-  background: #fff;
   background-color: #ede3db;
   padding: 20px 0;
   position: relative;
+}
+
+.stats-track {
+  white-space: nowrap;
 }
 
 .stats {
@@ -230,12 +289,7 @@ select {
   margin-bottom: 6px;
 }
 
-.highlight {
-  color: #f26e21;
-  font-weight: bold;
-}
-
-/* Keyframes for scrolling effect */
+/* Marquee Animation */
 @keyframes marquee {
   0% {
     transform: translateX(100%);
@@ -245,107 +299,120 @@ select {
   }
 }
 
-/* Treatments Section */
+/* ===================================
+   6. TREATMENTS SECTION
+   =================================== */
 
-
-
-treatments-section h2 {
-  color: #333;
+.treatments-section {
+  padding: 40px 20px;
   text-align: center;
-  
 }
 
-p {
-  color: #666;
-  text-align: center;
+.treatments-section h2 {
+  margin-bottom: 15px;
+}
+
+.treatments-section p {
   max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin: 0 auto 30px;
 }
 
 .treatments-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 30px;
   gap: 20px;
 }
 
 .treatment-card {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 300px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-5px);
 }
 
 .treatment-card img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.treatments-section h2 {
+.treatment-content h3 {
+  margin-bottom: 10px;
   color: #333;
-  margin-top: 15px; 
+}
+
+.treatment-content p {
+  margin-bottom: 15px;
   text-align: center;
 }
 
-.treatment-card p {
-  color: #666;
+.treatment-content h4 {
   text-align: left;
-  margin-top: 10px;
-  text-align: center;
+  margin: 15px 0 10px;
+  font-size: 16px;
 }
 
-.treatment-card ul {
+.treatment-content ul {
   text-align: left;
   padding-left: 20px;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.treatment-card li {
+.treatment-content li {
   margin-bottom: 5px;
   color: #666;
 }
 
 .price {
-  color: #ff6b00;
+  color: #f26e21;
   font-weight: bold;
   font-size: 20px;
-  margin-top: 10px;
+  margin: 15px 0;
 }
 
 .consultation-btn {
-  background-color: #ff9900;
+  background-color: #f26e21;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-top: 15px;
+  border-radius: 8px;
+  padding: 12px 20px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
-/* Gallery Section */
+
+.consultation-btn:hover {
+  background-color: #e55a0d;
+}
+
+/* ===================================
+   7. GALLERY SECTION
+   =================================== */
 
 .gallery-section {
   padding: 40px 20px;
   text-align: center;
-  font-family: "Segoe UI", sans-serif;
   background-color: #fff;
-  color: #111;
 }
 
 .gallery-section h2 {
   font-size: 28px;
-  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .gallery-section p {
   color: #555;
-  font-size: 16px;
-  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .gallery {
@@ -353,13 +420,11 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 40px;
 }
 
 .patient-card {
   text-align: center;
   max-width: 250px;
-  height: 100px;
 }
 
 .images {
@@ -367,72 +432,67 @@ p {
   gap: 4px;
   border-radius: 12px;
   overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .images img {
   width: 200px;
   height: 170px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
+}
+
+.patient-info {
+  text-align: center;
 }
 
 .patient-name {
   font-weight: 600;
-  margin-top: 10px;
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .patient-location {
-  color: #f97316;
+  color: #f26e21;
   font-size: 16px;
-  margin-top: 4px;
 }
 
-@media (max-width: 768px) {
-  .images img {
-    width: 70px;
-    height: 90px;
-  }
-}
-
-/* Why Choose Section */
+/* ===================================
+   8. WHY CHOOSE SECTION
+   =================================== */
 
 .choose-section {
   max-width: 1300px;
   margin: auto;
-  padding: 120px 20px;
+  padding: 60px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  flex-wrap: wrap;
 }
 
 .left-content {
   flex: 1;
-  min-width: 60%;
+  min-width: 300px;
 }
 
 .left-content h2 {
   font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-align: center;
-  padding-left: 50%;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-.left-content p.subtitle {
-  font-size: 20px;
+.left-content .subtitle {
+  font-size: 18px;
   color: #555;
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .feature-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-left: 10px;
+  gap: 20px;
 }
 
 .feature-item {
@@ -440,6 +500,8 @@ p {
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .feature-text {
@@ -449,69 +511,41 @@ p {
 .plus-symbol {
   font-size: 22px;
   font-weight: bold;
-  color: #f97316;
-  padding-left: 20px;
+  color: #f26e21;
+  margin-left: 20px;
 }
 
 .right-image {
   flex: 1;
-  min-width: 90px;
-  padding-top: 200px;
+  min-width: 300px;
 }
 
 .right-image img {
-  width: 85%;
-
+  width: 100%;
+  height: auto;
   border-radius: 20px;
 }
 
-@media (max-width: 768px) {
-  .choose-section {
-    flex-direction: column-reverse;
-    padding: 40px 20px;
-  }
-
-  .left-content h2 {
-    font-size: 24px;
-  }
-
-  .left-content p.subtitle {
-    font-size: 14px;
-  }
-
-  .feature-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .plus-symbol {
-    padding-left: 0;
-    margin-top: 4px;
-  }
-}
-
-/* Testimonial Section */
+/* ===================================
+   9. TESTIMONIAL SECTION
+   =================================== */
 
 .testimonial-section {
   max-width: 1300px;
   margin: auto;
-  padding: 0px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .testimonial-section h2 {
-  font-size: 28px;
-  font-weight: 700;
   margin-bottom: 10px;
 }
 
-.testimonial-section p.subtitle {
-  font-size: 16px;
+.testimonial-section .subtitle {
   color: #555;
   margin-bottom: 30px;
 }
 
-/* Scrollable row */
 .testimonial-scroll-container {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -520,7 +554,7 @@ p {
 .testimonial-cards {
   display: flex;
   gap: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   flex-wrap: nowrap;
 }
 
@@ -538,55 +572,60 @@ p {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 15px 15px 0 0;
 }
 
 .testimonial-content {
-  padding: 10px 12px 20px;
+  padding: 15px;
 }
 
 .testimonial-name {
   font-weight: 600;
   font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .testimonial-location {
   font-size: 14px;
   color: #555;
+  margin-bottom: 5px;
 }
 
 .testimonial-treatment {
   font-size: 14px;
   font-weight: 500;
-  color: #f97316;
+  color: #f26e21;
 }
 
-/* Optional: hide scrollbar on WebKit */
+/* Hide scrollbar */
 .testimonial-scroll-container::-webkit-scrollbar {
   display: none;
 }
 
 .testimonial-scroll-container {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* Appointment Form */
+/* ===================================
+   10. FORM SECTIONS
+   =================================== */
 
 .form-container {
   background-color: #fff8f2;
-  padding: 0px 20px;
-  max-width: 1290px;
+  padding: 40px 20px;
+  max-width: 1200px;
   margin: 40px auto;
   border-radius: 12px;
 }
 
 .form-container h2 {
   text-align: center;
-  font-size: 24px;
-  font-weight: bold;
   margin-bottom: 30px;
-  color: #222;
+}
+
+.appointment-booking-form {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .form-row {
@@ -600,16 +639,13 @@ p {
 .form-group {
   flex: 1;
   min-width: 250px;
-  position: relative;
 }
 
 .form-group input {
-  width: 80%;
+  width: 100%;
   padding: 14px 20px;
   border-radius: 25px;
   border: 1px solid #f5cba7;
-  outline: none;
-  font-size: 15px;
 }
 
 .captcha-group {
@@ -623,9 +659,7 @@ p {
 
 .captcha-group input {
   border: none;
-  outline: none;
   padding: 12px 20px;
-  font-size: 15px;
   flex: 1;
 }
 
@@ -637,7 +671,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 30px;
+  min-width: 80px;
 }
 
 .checkbox-row {
@@ -645,8 +679,7 @@ p {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  margin: 20px 0;
   justify-content: center;
   color: #333;
 }
@@ -657,12 +690,12 @@ p {
 }
 
 .checkbox-row a {
-  color: #000;
+  color: #f26e21;
   text-decoration: underline;
 }
 
 .submit-btn {
-  background-color: #f97316;
+  background-color: #f26e21;
   color: white;
   padding: 14px 30px;
   font-size: 15px;
@@ -670,34 +703,27 @@ p {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .form-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .captcha-group {
-    width: 100%;
-  }
+.submit-btn:hover {
+  background-color: #e55a0d;
 }
 
-.section {
-  text-align: center;
+/* ===================================
+   11. SAFETY & INNOVATION SECTION
+   =================================== */
+
+.safety-section {
   padding: 40px 20px;
 }
 
-.section h2 {
-  font-size: 28px;
-  font-weight: 700;
+.safety-section h2 {
+  margin-bottom: 15px;
 }
 
-.section p {
-  font-size: 18px;
-  color: #555;
-  margin-top: 10px;
+.safety-section p {
+  margin-bottom: 40px;
 }
 
 .card-container {
@@ -705,7 +731,6 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 40px;
 }
 
 .card {
@@ -715,6 +740,11 @@ p {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .card img {
@@ -730,12 +760,12 @@ p {
   color: white;
   width: 100%;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .card-content h3 {
   margin: 0 0 10px;
   font-size: 20px;
+  color: white;
 }
 
 .orange-bar {
@@ -761,14 +791,13 @@ p {
   gap: 8px;
 }
 
-.learn-more::before {
-  content: "🔍";
-}
-
-/* Unique background for the third card */
 .card.brown .card-content {
   background: #4a2c1c;
 }
+
+/* ===================================
+   12. REVIEWS SECTION
+   =================================== */
 
 .reviews-section {
   background-color: #fff7f3;
@@ -777,8 +806,6 @@ p {
 
 .reviews-section h2 {
   text-align: center;
-  font-size: 28px;
-  font-weight: 700;
   margin-bottom: 40px;
 }
 
@@ -797,12 +824,12 @@ p {
   text-align: center;
   width: 220px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border-right: 2px solid #ffe7d9;
 }
 
 .review-summary img {
   width: 40px;
   height: 40px;
+  margin-bottom: 10px;
 }
 
 .review-summary .rating {
@@ -837,9 +864,6 @@ p {
   right: 0;
   width: 60px;
   height: 60px;
-  background: url('./assets/logo/google.png')
-    no-repeat center;
-  background-size: 50%;
   background-color: #ffe7d9;
   border-top-right-radius: 16px;
   border-bottom-left-radius: 50%;
@@ -872,6 +896,10 @@ p {
   text-align: center;
 }
 
+/* ===================================
+   13. LOCATION SECTION
+   =================================== */
+
 .location-section {
   padding: 40px 20px;
   max-width: 1200px;
@@ -880,20 +908,18 @@ p {
 
 .location-section h2 {
   font-size: 28px;
-  font-weight: bold;
-  color: #222;
+  margin-bottom: 15px;
 }
 
 .location-section p {
   font-size: 18px;
   color: #555;
-  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .location-content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
   gap: 40px;
 }
 
@@ -913,6 +939,11 @@ p {
   padding: 12px;
   gap: 12px;
   background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.city-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .city-card img {
@@ -927,8 +958,8 @@ p {
 
 .city-card .info strong {
   display: block;
-  font-size: 16px;
   font-weight: bold;
+  margin-bottom: 2px;
 }
 
 .image-gallery {
@@ -946,19 +977,9 @@ p {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .location-content {
-    flex-direction: column;
-  }
-
-  .image-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .city-list {
-    grid-template-columns: 1fr;
-  }
-}
+/* ===================================
+   14. OFFER SECTION
+   =================================== */
 
 .offer-section {
   display: flex;
@@ -967,8 +988,8 @@ p {
   gap: 20px;
   padding: 40px 20px;
   background-color: #fff;
-  width: 72%;
-  padding-left: 240px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .form-box,
@@ -979,7 +1000,6 @@ p {
   padding: 24px;
   flex: 1;
   min-width: 300px;
-  box-sizing: border-box;
 }
 
 .form-box h3 {
@@ -994,14 +1014,12 @@ p {
   margin-bottom: 20px;
 }
 
-.form-box input[type="text"],
-.form-box input[type="tel"] {
+.form-box input {
   width: 100%;
   padding: 12px;
   border-radius: 999px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
-  font-size: 14px;
 }
 
 .form-box label {
@@ -1021,31 +1039,27 @@ p {
   font-weight: bold;
   border: none;
   border-radius: 999px;
-  font-size: 15px;
   cursor: pointer;
 }
 
-/* Middle Offer Panel */
 .membership-box {
-  flex: 1;
   background-color: #fff3e5;
   border-radius: 16px;
-  padding: 0px;
-  max-width:300px;
-  box-sizing: border-box;
+  padding: 20px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 15px;
 }
 
 .membership-box h4 {
   background-color: #f26e21;
   color: white;
   padding: 4px 10px;
-  display: inline-block;
   font-size: 14px;
   border-radius: 5px;
+  align-self: flex-start;
 }
 
 .membership-box h2 {
@@ -1057,6 +1071,7 @@ p {
   font-size: 34px;
   font-weight: bold;
   margin: 15px 0 5px;
+  color: #f26e21;
 }
 
 .membership-box p {
@@ -1077,7 +1092,6 @@ p {
   border-radius: 10px;
 }
 
-/* Right Offer Details */
 .offer-box ul {
   font-size: 14px;
   padding-left: 20px;
@@ -1108,25 +1122,10 @@ p {
   float: right;
 }
 
-@media (max-width: 768px) {
-  .offer-section {
-    flex-direction: column;
-  }
+/* ===================================
+   15. FAQ SECTION
+   =================================== */
 
-  .buy-btn {
-    float: none;
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: #fff;
-  color: #333;
-}
-
-/* FAQ Section */
 .faq-section {
   max-width: 1200px;
   margin: 60px auto;
@@ -1135,14 +1134,12 @@ body {
 
 .faq-section h2 {
   text-align: center;
-  font-size: 24px;
   margin-bottom: 40px;
-  font-weight: bold;
 }
 
 .faq-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px 60px;
 }
 
@@ -1152,6 +1149,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-item:hover {
+  color: #f26e21;
 }
 
 .faq-item span {
@@ -1162,10 +1165,12 @@ body {
   font-size: 20px;
   color: #f26e21;
   font-weight: bold;
-  cursor: pointer;
 }
 
-/* Footer Section */
+/* ===================================
+   16. FOOTER SECTION
+   =================================== */
+
 .footer {
   background-color: #44240a;
   color: white;
@@ -1203,6 +1208,11 @@ body {
 .footer-links a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f26e21;
 }
 
 .footer-bottom {
@@ -1212,39 +1222,65 @@ body {
   color: #ddd;
 }
 
-@media (max-width: 768px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
+/* ===================================
+   17. RESPONSIVE MEDIA QUERIES
+   =================================== */
 
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
+/* Mobile-first responsive design */
+input,
+textarea,
+select {
+  font-size: 16px !important;
+}
 
-  .footer-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-logo {
-    font-size: 28px;
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 
-/* Header Responsive */
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container,
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .treatment-card {
+    width: 45%;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .testimonial-card {
+    width: 180px;
+  }
+}
+
+/* Tablet Portrait & Mobile */
 @media (max-width: 768px) {
+  /* Header Responsive */
   .header {
     flex-direction: column;
     padding: 15px 20px;
     gap: 15px;
   }
 
-  .brand-main {
-    font-size: 28px;
-  }
-
+  .brand-main,
   .smile {
     font-size: 28px;
   }
@@ -1266,26 +1302,8 @@ body {
     justify-content: center;
     padding: 12px 20px;
   }
-}
 
-@media (max-width: 480px) {
-  .header {
-    padding: 10px 15px;
-  }
-
-  .brand-main,
-  .smile {
-    font-size: 24px;
-  }
-
-  .brand-sub {
-    font-size: 8px;
-    letter-spacing: 2px;
-  }
-}
-
-/* Hero Section Responsive */
-@media (max-width: 768px) {
+  /* Hero Section */
   .hero {
     flex-direction: column;
     padding: 15px;
@@ -1294,30 +1312,10 @@ body {
 
   .appointment-form {
     padding: 20px;
-    padding-left: 20px;
     max-width: 100%;
   }
 
-  .appointment-form input,
-  .appointment-form button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 10px;
-  }
-
-  .appointment-form {
-    padding: 15px;
-  }
-}
-
-/* Treatments Section Responsive */
-@media (max-width: 768px) {
+  /* Treatments Section */
   .treatments-container {
     flex-direction: column;
     align-items: center;
@@ -1329,29 +1327,7 @@ body {
     max-width: 350px;
   }
 
-  .treatment-card img {
-    height: 200px;
-    object-fit: cover;
-  }
-}
-
-@media (max-width: 480px) {
-  .treatment-card {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .treatment-card h2 {
-    font-size: 18px;
-  }
-
-  .price {
-    font-size: 18px;
-  }
-}
-
-/* Stats Section Responsive */
-@media (max-width: 768px) {
+  /* Stats Section */
   .stats-wrapper {
     padding: 15px 0;
   }
@@ -1368,21 +1344,8 @@ body {
   .stat-icon {
     font-size: 24px;
   }
-}
 
-@media (max-width: 480px) {
-  .stat {
-    min-width: 100px;
-    font-size: 10px;
-  }
-
-  .stat-icon {
-    font-size: 20px;
-  }
-}
-
-/* Gallery Section Responsive */
-@media (max-width: 768px) {
+  /* Gallery Section */
   .gallery {
     gap: 20px;
   }
@@ -1395,9 +1358,190 @@ body {
     width: 120px;
     height: 100px;
   }
+
+  /* Why Choose Section */
+  .choose-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .left-content h2 {
+    text-align: center;
+  }
+
+  .left-content .subtitle {
+    text-align: center;
+  }
+
+  /* Testimonial Section */
+  .testimonial-cards {
+    gap: 15px;
+  }
+
+  .testimonial-card {
+    width: 180px;
+  }
+
+  /* Form Container */
+  .form-container {
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group {
+    min-width: unset;
+  }
+
+  .captcha-group {
+    min-width: unset;
+  }
+
+  /* Safety Section */
+  .card-container {
+    gap: 15px;
+  }
+
+  .card {
+    width: 280px;
+    height: 320px;
+  }
+
+  /* Reviews Section */
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .review-summary,
+  .review-card {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  /* Location Section */
+  .location-content {
+    flex-direction: column;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .city-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Offer Section */
+  .offer-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .form-box,
+  .offer-box,
+  .membership-box {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* FAQ Section */
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-logo {
+    font-size: 28px;
+  }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Header */
+  .header {
+    padding: 10px 15px;
+  }
+
+  .brand-main,
+  .smile {
+    font-size: 24px;
+  }
+
+  .brand-sub {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 10px;
+  }
+
+  .appointment-form {
+    padding: 15px;
+  }
+
+  /* Typography */
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  /* Treatments */
+  .treatment-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .treatment-card h3 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  /* Stats */
+  .stat {
+    min-width: 100px;
+    font-size: 10px;
+  }
+
+  .stat-icon {
+    font-size: 20px;
+  }
+
+  /* Gallery */
   .gallery {
     flex-direction: column;
     align-items: center;
@@ -1412,20 +1556,8 @@ body {
     width: 140px;
     height: 120px;
   }
-}
 
-/* Testimonial Section Responsive */
-@media (max-width: 768px) {
-  .testimonial-cards {
-    gap: 15px;
-  }
-
-  .testimonial-card {
-    width: 180px;
-  }
-}
-
-@media (max-width: 480px) {
+  /* Testimonials */
   .testimonial-card {
     width: 160px;
   }
@@ -1442,21 +1574,25 @@ body {
   .testimonial-treatment {
     font-size: 12px;
   }
-}
 
-/* Card Container Section Responsive */
-@media (max-width: 768px) {
-  .card-container {
-    gap: 15px;
+  /* Forms */
+  .form-container {
+    margin: 15px auto;
+    padding: 15px 10px;
   }
 
-  .card {
-    width: 280px;
-    height: 320px;
+  .form-container h2 {
+    font-size: 20px;
   }
-}
 
-@media (max-width: 480px) {
+  .checkbox-row {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  /* Cards */
   .card {
     width: 90%;
     max-width: 300px;
@@ -1474,24 +1610,8 @@ body {
   .card-content p {
     font-size: 13px;
   }
-}
 
-/* Reviews Section Responsive */
-@media (max-width: 768px) {
-  .reviews-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .review-summary,
-  .review-card {
-    width: 90%;
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 480px) {
+  /* Reviews */
   .review-summary,
   .review-card {
     width: 95%;
@@ -1504,28 +1624,9 @@ body {
   .review-summary .count {
     font-size: 16px;
   }
-}
 
-/* Offer Section Responsive */
-@media (max-width: 768px) {
+  /* Offer Section */
   .offer-section {
-    width: 90%;
-    padding-left: 20px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-box,
-  .offer-box,
-  .membership-box {
-    width: 100%;
-    min-width: unset;
-  }
-}
-
-@media (max-width: 480px) {
-  .offer-section {
-    width: 95%;
     padding: 20px 10px;
   }
 
@@ -1536,95 +1637,37 @@ body {
   .membership-box h2 {
     font-size: 18px;
   }
-}
 
-/* General Section Headers Responsive */
-@media (max-width: 768px) {
-  .section h2 {
-    font-size: 24px;
-  }
-
-  .section p {
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .section h2 {
-    font-size: 20px;
-  }
-
-  .section p {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-}
-
-/* Form Container Responsive Improvements */
-@media (max-width: 768px) {
-  .form-container {
-    margin: 20px auto;
-    padding: 20px 15px;
-  }
-
-  .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .form-group {
-    min-width: unset;
-  }
-
-  .form-group input {
-    width: 90%;
-  }
-
-  .captcha-group {
-    min-width: unset;
-  }
-}
-
-@media (max-width: 480px) {
-  .form-container {
-    margin: 15px auto;
-    padding: 15px 10px;
-  }
-
-  .form-container h2 {
-    font-size: 20px;
-  }
-
-  .checkbox-row {
-    font-size: 12px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-}
-
-/* General responsive improvements */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
+  /* Buttons */
   .btn-orange,
-  .btn-white {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
+  .btn-white,
   .consultation-btn,
   .submit-btn {
     padding: 10px 15px;
     font-size: 14px;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .treatment-card img,
+  .patient-card img,
+  .testimonial-card img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .stats {
+    animation: none;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
