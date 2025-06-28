@@ -78,7 +78,7 @@ p {
 
 .section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 10px 20px;
 }
 
 .highlight {
@@ -193,7 +193,7 @@ select:focus {
 
 .hero {
   display: flex;
-  padding: 20px;
+  padding: 15px;
   gap: 20px;
   align-items: center;
 }
@@ -261,7 +261,7 @@ select:focus {
 .stats-wrapper {
   overflow: hidden;
   background-color: #ede3db;
-  padding: 20px 0;
+  padding: 15px 0;
   position: relative;
 }
 
@@ -304,7 +304,7 @@ select:focus {
    =================================== */
 
 .treatments-section {
-  padding: 40px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -314,7 +314,7 @@ select:focus {
 
 .treatments-section p {
   max-width: 600px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
 
 .treatments-container {
@@ -400,7 +400,7 @@ select:focus {
    =================================== */
 
 .gallery-section {
-  padding: 40px 20px;
+  padding: 10px 20px;
   text-align: center;
   background-color: #fff;
 }
@@ -412,14 +412,14 @@ select:focus {
 
 .gallery-section p {
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .patient-card {
@@ -464,11 +464,11 @@ select:focus {
 .choose-section {
   max-width: 1300px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 40px;
 }
 
 .left-content {
@@ -478,14 +478,14 @@ select:focus {
 
 .left-content h2 {
   font-size: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
 .left-content .subtitle {
   font-size: 18px;
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   text-align: left;
 }
 
@@ -533,7 +533,7 @@ select:focus {
 .testimonial-section {
   max-width: 1300px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -543,7 +543,7 @@ select:focus {
 
 .testimonial-section .subtitle {
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .testimonial-scroll-container {
@@ -612,15 +612,15 @@ select:focus {
 
 .form-container {
   background-color: #fff8f2;
-  padding: 40px 20px;
+  padding: 15px 20px;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 15px auto;
   border-radius: 12px;
 }
 
 .form-container h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .appointment-booking-form {
@@ -679,7 +679,7 @@ select:focus {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  margin: 20px 0;
+  margin: 15px 0;
   justify-content: center;
   color: #333;
 }
@@ -715,7 +715,7 @@ select:focus {
    =================================== */
 
 .safety-section {
-  padding: 40px 20px;
+  padding: 10px 20px;
 }
 
 .safety-section h2 {
@@ -723,7 +723,7 @@ select:focus {
 }
 
 .safety-section p {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .card-container {
@@ -801,12 +801,12 @@ select:focus {
 
 .reviews-section {
   background-color: #fff7f3;
-  padding: 40px 20px;
+  padding: 10px 20px;
 }
 
 .reviews-section h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .reviews-container {
@@ -901,7 +901,7 @@ select:focus {
    =================================== */
 
 .location-section {
-  padding: 40px 20px;
+  padding: 10px 20px;
   max-width: 1200px;
   margin: auto;
 }
@@ -914,13 +914,13 @@ select:focus {
 .location-section p {
   font-size: 18px;
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .location-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 25px;
 }
 
 .city-list {
@@ -986,7 +986,7 @@ select:focus {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 40px 20px;
+  padding: 20px 20px;
   background-color: #fff;
   max-width: 1200px;
   margin: 0 auto;
@@ -1128,13 +1128,13 @@ select:focus {
 
 .faq-section {
   max-width: 1200px;
-  margin: 60px auto;
+  margin: 30px auto;
   padding: 0 20px;
 }
 
 .faq-section h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .faq-grid {
