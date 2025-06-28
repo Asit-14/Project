@@ -34,8 +34,7 @@
 		<!-- Hero Section -->
 		<section class="hero">
 			<div class="hero-image">
-				<img src="./assets/images/dental-clinic.jpg.png"
-					alt="Modern dental clinic interior with advanced equipment">
+				<img src="./assets/images/dental-clinic.jpg.png" alt="Modern dental clinic interior with advanced equipment">
 			</div>
 			<div class="appointment-form">
 				<h1>Get Expert Dental Guidance in Delhi</h1>
@@ -43,13 +42,23 @@
 				<form id="hero-appointment-form" aria-label="Book appointment form">
 					<input type="text" placeholder="Name" required aria-label="Your full name">
 					<input type="tel" placeholder="Mobile Number" required aria-label="Your mobile number">
-					<input type="text" placeholder="Captcha" required aria-label="Enter captcha code">
+		
+					<!-- Captcha container with input and display box -->
+					<div class="captcha-row">
+						<input type="text" placeholder="Captcha" required aria-label="Enter captcha code" class="captcha-input">
+						<div class="captcha-display">1514</div>
+					</div>
+		
+					<div class="terms-checkbox">
+						<input type="checkbox" id="agree-terms" required>
+						<label for="agree-terms">I agree to CLOVE Dental's <a href="#">Terms</a> and <a href="#">Privacy
+								Policy</a> and consent to contact via phone, email, or SMS.</label>
+					</div>
+		
 					<button type="submit">Book a Free Consultation</button>
 				</form>
-				<p class="disclaimer">I agree to CLOVE Dental's Terms and Privacy Policy and consent to contact via
-					phone, email, or SMS.</p>
 			</div>
-		</section>
+			</section>
 
 		<!-- Stats Section -->
 		<section class="stats-wrapper" aria-label="Clove Dental statistics">
