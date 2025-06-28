@@ -1,8 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0;
+  padding: 0%;
+  margin: 0%;
   font-family: "Inter", sans-serif;
   background-color: #fff9f4;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Mobile-first responsive design */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix for iOS Safari zoom issue */
+input,
+textarea,
+select {
+  font-size: 16px !important;
+}
+
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+/* Container max-width for large screens */
+@media (min-width: 1200px) {
+  .container,
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet specific styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .treatment-card {
+    width: 45%;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .testimonial-card {
+    width: 200px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .treatment-card img,
+  .patient-card img,
+  .testimonial-card img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles can be added here if needed */
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .scrolling-banner,
+  .scrolling-content {
+    animation: none;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 .header {
@@ -78,102 +167,36 @@ body {
 /* Hero Section */
 .hero {
   display: flex;
-  padding: 40px;
-  background-image: url("./assets/images/dental-clinic.jpg.png"); /* Replace with your background */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.hero-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
+  flex-wrap: wrap;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.appointment-form {
+  background-color: #f8f8f8;
+  padding: 20px;
+  width: 100%;
   max-width: 400px;
-  border-radius: 10px;
+  padding-left: 100px;
 }
 
-.hero-left h2 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.hero-left p {
-  font-size: 15px;
-  color: #555;
-}
-
-.hero-right {
-  flex: 1;
-  background-color: #fffaf6;
-  border-radius: 10px;
-  padding: 30px;
-  max-width: 400px;
-  margin-left: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-.hero-right h3 {
-  font-size: 18px;
+.appointment-form input,
+.appointment-form button {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.form-group {
-  margin-bottom: 14px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.captcha-box {
-  display: flex;
-  gap: 0;
-  margin-bottom: 14px;
-}
-
-.captcha-box input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  flex: 1;
-}
-
-.captcha-code {
-  background-color: #44240a;
-  color: white;
-  padding: 12px 20px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.form-check {
-  display: flex;
-  align-items: flex-start;
-  font-size: 12px;
-  color: #444;
-  margin-bottom: 14px;
-}
-
-.form-check input {
-  margin-right: 8px;
-  margin-top: 3px;
-}
-
-.btn-form {
-  width: 100%;
-  background-color: #f26e21;
+.appointment-form button {
+  background-color: #ff9900;
   color: white;
   border: none;
-  padding: 14px;
-  border-radius: 30px;
-  font-weight: 500;
   cursor: pointer;
 }
 
@@ -222,121 +245,88 @@ input[type="text"] {
   }
 }
 
+/* Treatments Section */
 
 
-/* Treatment Section */
 
-.treatment-section {
+treatments-section h2 {
+  color: #333;
   text-align: center;
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.treatment-section h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.treatment-section .description {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.treatment-card {
-  background-color: #fff;
-  border: 1px solid #f5d7c6;
-  border-radius: 18px;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.treatment-card:hover {
-  transform: translateY(-5px);
-}
-
-.treatment-img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #eee;
   
 }
 
-.card-content {
+p {
+  color: #666;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.treatments-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.treatment-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.treatment-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.treatments-section h2 {
+  color: #333;
+  margin-top: 15px; 
+  text-align: center;
+}
+
+.treatment-card p {
+  color: #666;
   text-align: left;
+  margin-top: 10px;
+  text-align: center;
 }
 
-.card-content h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.card-content p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-.card-content ul {
-  list-style-type: disc;
+.treatment-card ul {
+  text-align: left;
   padding-left: 20px;
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-.price-section .label {
-  font-size: 14px;
-  color: #f97316;
-  font-weight: 600;
+.treatment-card li {
+  margin-bottom: 5px;
+  color: #666;
 }
 
-.price-section .price {
-  font-size: 20px;
+.price {
+  color: #ff6b00;
   font-weight: bold;
-  margin: 6px 0 14px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-.btn {
-  background-color: #f97316;
+.consultation-btn {
+  background-color: #ff9900;
   color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 15px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 14px;
 }
-
-.btn:hover {
-  background-color: #dd600f;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .treatment-card {
-    width: 90%;
-  }
-}
-
 /* Gallery Section */
 
 .gallery-section {
@@ -410,7 +400,7 @@ input[type="text"] {
 .choose-section {
   max-width: 1300px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 120px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -465,12 +455,12 @@ input[type="text"] {
 
 .right-image {
   flex: 1;
-  min-width: 100px;
-  padding-top: 250px;
+  min-width: 90px;
+  padding-top: 200px;
 }
 
 .right-image img {
-  width: 65%;
+  width: 85%;
 
   border-radius: 20px;
 }
@@ -500,14 +490,12 @@ input[type="text"] {
   }
 }
 
-
-
 /* Testimonial Section */
 
 .testimonial-section {
   max-width: 1300px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 0px 20px;
   text-align: center;
 }
 
@@ -696,7 +684,6 @@ input[type="text"] {
   }
 }
 
-
 .section {
   text-align: center;
   padding: 40px 20px;
@@ -783,8 +770,6 @@ input[type="text"] {
   background: #4a2c1c;
 }
 
-
-
 .reviews-section {
   background-color: #fff7f3;
   padding: 40px 20px;
@@ -852,7 +837,7 @@ input[type="text"] {
   right: 0;
   width: 60px;
   height: 60px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_"G"_Logo.svg')
+  background: url('./assets/logo/google.png')
     no-repeat center;
   background-size: 50%;
   background-color: #ffe7d9;
@@ -886,7 +871,6 @@ input[type="text"] {
   color: #555;
   text-align: center;
 }
-
 
 .location-section {
   padding: 40px 20px;
@@ -976,8 +960,6 @@ input[type="text"] {
   }
 }
 
-
-
 .offer-section {
   display: flex;
   flex-wrap: wrap;
@@ -1048,12 +1030,13 @@ input[type="text"] {
   flex: 1;
   background-color: #fff3e5;
   border-radius: 16px;
-  padding: 24px;
-  min-width: 300px;
+  padding: 0px;
+  max-width:300px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .membership-box h4 {
@@ -1088,9 +1071,10 @@ input[type="text"] {
 }
 
 .membership-box img {
-  max-width: 150px;
+  max-width: 200px;
   align-self: flex-end;
   margin-top: 10px;
+  border-radius: 10px;
 }
 
 /* Right Offer Details */
@@ -1135,8 +1119,6 @@ input[type="text"] {
     margin-top: 10px;
   }
 }
-
-
 
 body {
   font-family: "Segoe UI", sans-serif;
@@ -1251,42 +1233,398 @@ body {
   }
 }
 
+/* Header Responsive */
 @media (max-width: 768px) {
-  .hero,
-  .why-choose,
-  .expert-guidance {
+  .header {
     flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
   }
 
-  .hero img,
-  .appointment-form,
-  .why-choose-text,
-  .why-choose-image,
-  .expert-guidance-form,
-  .membership-plan {
+  .brand-main {
+    font-size: 28px;
+  }
+
+  .smile {
+    font-size: 28px;
+  }
+
+  .brand-sub {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .header-buttons {
+    flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
-  .treatment,
-  .safety-precision-card,
-  .review-card,
-  .location-card {
-    width: 80%;
+  .btn-orange,
+  .btn-white {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .stat-item,
-  .treatment,
-  .safety-precision-card,
-  .review-card,
-  .location-card,
-  .faq-item {
-    width: 95%;
+  .header {
+    padding: 10px 15px;
+  }
+
+  .brand-main,
+  .smile {
+    font-size: 24px;
+  }
+
+  .brand-sub {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Hero Section Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .appointment-form {
+    padding: 20px;
+    padding-left: 20px;
+    max-width: 100%;
   }
 
   .appointment-form input,
-  .appointment-booking input {
+  .appointment-form button {
     width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 10px;
+  }
+
+  .appointment-form {
+    padding: 15px;
+  }
+}
+
+/* Treatments Section Responsive */
+@media (max-width: 768px) {
+  .treatments-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .treatment-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .treatment-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatment-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .treatment-card h2 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+}
+
+/* Stats Section Responsive */
+@media (max-width: 768px) {
+  .stats-wrapper {
+    padding: 15px 0;
+  }
+
+  .stats {
+    gap: 30px;
+  }
+
+  .stat {
+    min-width: 120px;
+    font-size: 12px;
+  }
+
+  .stat-icon {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat {
+    min-width: 100px;
+    font-size: 10px;
+  }
+
+  .stat-icon {
+    font-size: 20px;
+  }
+}
+
+/* Gallery Section Responsive */
+@media (max-width: 768px) {
+  .gallery {
+    gap: 20px;
+  }
+
+  .patient-card {
+    max-width: 200px;
+  }
+
+  .images img {
+    width: 120px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .patient-card {
+    max-width: 300px;
+  }
+
+  .images img {
+    width: 140px;
+    height: 120px;
+  }
+}
+
+/* Testimonial Section Responsive */
+@media (max-width: 768px) {
+  .testimonial-cards {
+    gap: 15px;
+  }
+
+  .testimonial-card {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    width: 160px;
+  }
+
+  .testimonial-content {
+    padding: 8px 10px 15px;
+  }
+
+  .testimonial-name {
+    font-size: 14px;
+  }
+
+  .testimonial-location,
+  .testimonial-treatment {
+    font-size: 12px;
+  }
+}
+
+/* Card Container Section Responsive */
+@media (max-width: 768px) {
+  .card-container {
+    gap: 15px;
+  }
+
+  .card {
+    width: 280px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+  }
+
+  .card-content p {
+    font-size: 13px;
+  }
+}
+
+/* Reviews Section Responsive */
+@media (max-width: 768px) {
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .review-summary,
+  .review-card {
+    width: 90%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-summary,
+  .review-card {
+    width: 95%;
+  }
+
+  .review-summary .rating {
+    font-size: 20px;
+  }
+
+  .review-summary .count {
+    font-size: 16px;
+  }
+}
+
+/* Offer Section Responsive */
+@media (max-width: 768px) {
+  .offer-section {
+    width: 90%;
+    padding-left: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-box,
+  .offer-box,
+  .membership-box {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-section {
+    width: 95%;
+    padding: 20px 10px;
+  }
+
+  .membership-box .price {
+    font-size: 28px;
+  }
+
+  .membership-box h2 {
+    font-size: 18px;
+  }
+}
+
+/* General Section Headers Responsive */
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* Form Container Responsive Improvements */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group {
+    min-width: unset;
+  }
+
+  .form-group input {
+    width: 90%;
+  }
+
+  .captcha-group {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    margin: 15px auto;
+    padding: 15px 10px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+
+  .checkbox-row {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+/* General responsive improvements */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .btn-orange,
+  .btn-white {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .consultation-btn,
+  .submit-btn {
+    padding: 10px 15px;
+    font-size: 14px;
   }
 }
