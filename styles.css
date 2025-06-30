@@ -249,25 +249,35 @@ select:focus {
 /* Captcha Row Styling */
 .captcha-row {
   display: flex;
-  gap: 10px;
   width: 100%;
+  position: relative;
 }
 
 .captcha-input {
   flex-grow: 1;
+  padding-right: 140px; /* Make space for captcha display on right side */
+  padding-left: 15px; /* Normal left padding */
+  border-radius: 25px;
 }
 
 .captcha-display {
   background-color: #5B2E0E; /* Brown color for captcha box */
   color: white;
-  border-radius: 8px;
+  border-radius: 0px 25px 25px 0px; /* Right side normal, left side 20px radius */
   padding: 0 20px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  min-width: 100px;
+  min-width: 120px; /* Increased width */
+  width: 120px;
+  height: 48px; /* Match input height */
   font-size: 16px;
+  position: absolute;
+  right: 1px; /* Position on right side */
+  top: 1px;
+  z-index: 1;
 }
 
 /* Terms Checkbox Styling */
@@ -319,12 +329,21 @@ select:focus {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .captcha-row {
-      flex-direction: column;
+      position: relative;
+  }
+  
+  .captcha-input {
+      padding-right: 140px; /* Maintain space for captcha on mobile right side */
+      padding-left: 15px; /* Normal left padding */
   }
   
   .captcha-display {
-      width: 100%;
+      width: 120px;
       height: 48px;
+      position: absolute;
+      right: 1px; /* Keep on right side for mobile */
+      top: 1px;
+      border-radius: 20px 25px 25px 20px; /* Maintain radius on mobile */
   }
 }
 
@@ -1579,6 +1598,7 @@ select {
   .brand-sub {
     font-size: 10px;
     letter-spacing: 3px;
+     text-align: right;
   }
 
   .header-buttons {
