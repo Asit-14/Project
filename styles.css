@@ -261,11 +261,11 @@ select:focus {
 }
 
 .captcha-display {
-  background-color: #5B2E0E; /* Brown color for captcha box */
+  background-color: #5b2e0e; /* Brown color for captcha box */
   color: white;
   border-radius: 0px 25px 25px 0px; /* Right side normal, left side 20px radius */
   padding: 0 20px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,7 +312,7 @@ select:focus {
 #hero-appointment-form button {
   width: 100%;
   padding: 15px;
-  background-color: #F7941D; /* Orange button */
+  background-color: #f7941d; /* Orange button */
   color: white;
   border: none;
   border-radius: 25px;
@@ -329,21 +329,21 @@ select:focus {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .captcha-row {
-      position: relative;
+    position: relative;
   }
-  
+
   .captcha-input {
-      padding-right: 140px; /* Maintain space for captcha on mobile right side */
-      padding-left: 15px; /* Normal left padding */
+    padding-right: 140px; /* Maintain space for captcha on mobile right side */
+    padding-left: 15px; /* Normal left padding */
   }
-  
+
   .captcha-display {
-      width: 120px;
-      height: 48px;
-      position: absolute;
-      right: 1px; /* Keep on right side for mobile */
-      top: 1px;
-      border-radius: 20px 25px 25px 20px; /* Maintain radius on mobile */
+    width: 120px;
+    height: 48px;
+    position: absolute;
+    right: 1px; /* Keep on right side for mobile */
+    top: 1px;
+    border-radius: 20px 25px 25px 20px; /* Maintain radius on mobile */
   }
 }
 
@@ -351,75 +351,74 @@ select:focus {
    5. STATS SECTION
    =================================== */
 
-   .stats-wrapper {
-    overflow: hidden;
-    background: #fff;
-    padding: 20px 0;
+.stats-wrapper {
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+}
+
+.stats-track {
+  width: 100%;
+}
+
+.stats {
+  display: flex;
+  gap: 50px;
+  animation: scrollStats 20s linear 1;
+}
+
+.stat {
+  min-width: 200px;
+  text-align: center;
+  flex-shrink: 0;
+  font-family: sans-serif;
+}
+
+.stat-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 18px;
+  color: #333;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #e67700;
+}
+
+@keyframes scrollStats {
+  0% {
+    transform: translateX(0%);
   }
-  
-  .stats-track {
-    width: 100%;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .stats {
-    display: flex;
-    gap: 50px;
-    animation: scrollStats 20s linear 1;
-  }
-  
-  .stat {
-    min-width: 200px;
-    text-align: center;
-    flex-shrink: 0;
-    font-family: sans-serif;
-  }
-  
-  .stat-icon {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  .stat-value {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .highlight {
-    font-weight: bold;
-    color: #e67700;
-  }
-  
-  @keyframes scrollStats {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
+}
 
 /* ===================================
    6. TREATMENTS SECTION
    =================================== */
 
-   .treatments-section {
-    padding: 60px 0;
-    text-align: center;
+.treatments-section {
+  padding: 60px 0;
+  text-align: center;
 }
 
 .treatments-section h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #333;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .section-description {
-    font-size: 16px;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto 40px;
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 40px;
 }
 
 /* Treatment Cards Container */
@@ -477,7 +476,6 @@ select:focus {
   gap: 30px;
   flex-wrap: wrap;
 }
-
 
 /* Treatments Section Styles */
 .treatments-section {
@@ -594,7 +592,7 @@ select:focus {
 .price-label {
   display: block;
   font-size: 14px;
-  color: #F7941D;
+  color: #f7941d;
   font-weight: 600;
   margin-bottom: 3px;
 }
@@ -608,7 +606,7 @@ select:focus {
 /* Button Styles */
 .consultation-btn {
   display: inline-block;
-  background-color: #F7941D;
+  background-color: #f7941d;
   color: white;
   font-size: 14px;
   font-weight: 600;
@@ -628,54 +626,54 @@ select:focus {
 /* Responsive Styles */
 @media (max-width: 992px) {
   .treatment-card {
-      width: 100%;
-      max-width: 600px;
+    width: 100%;
+    max-width: 600px;
   }
 }
 
 @media (max-width: 768px) {
   .treatment-card {
-      flex-direction: column;
-      max-width: 500px;
+    flex-direction: column;
+    max-width: 500px;
   }
 
   .treatment-image {
-      height: 150px;
-      width: 100%;
-      flex: 0 0 auto;
+    height: 150px;
+    width: 100%;
+    flex: 0 0 auto;
   }
-  
+
   .treatment-content {
-      border-left: none;
-      border-top: 1px solid #f0f0f0;
+    border-left: none;
+    border-top: 1px solid #f0f0f0;
   }
-  
+
   .treatments-section h2 {
-      font-size: 28px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 576px) {
   .treatments-section {
-      padding: 40px 0;
+    padding: 40px 0;
   }
-  
+
   .treatment-content {
-      padding: 15px;
+    padding: 15px;
   }
-  
+
   .treatment-content h3 {
-      font-size: 18px;
+    font-size: 18px;
   }
-  
+
   .price-amount {
-      font-size: 18px;
+    font-size: 18px;
   }
-  
+
   .consultation-btn {
-      width: 100%;
-      text-align: center;
-      padding: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
   }
 }
 /* ===================================
@@ -745,90 +743,90 @@ select:focus {
    =================================== */
 
 .clove-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .clove-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .clove-info-section {
-    flex: 1;
-    padding-right: 20px;
+  flex: 1;
+  padding-right: 20px;
 }
 
 .clove-main-heading {
-    color: #333;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 15px;
+  color: #333;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .clove-tagline {
-    color: #555;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 40px;
-    line-height: 1.5;
+  color: #555;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.5;
 }
 
 .clove-benefits-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .clove-benefit-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .clove-benefit-text {
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
 }
 
 .clove-benefit-icon {
-    color: #ff7200;
-    font-size: 18px;
+  color: #ff7200;
+  font-size: 18px;
 }
 
 .clove-visual-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .clove-staff-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
-    .clove-wrapper {
-        flex-direction: column-reverse;
-    }
-    
-    .clove-info-section {
-        padding-right: 0;
-    }
-    
-    .clove-visual-section {
-        margin-bottom: 30px;
-    }
+  .clove-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .clove-info-section {
+    padding-right: 0;
+  }
+
+  .clove-visual-section {
+    margin-bottom: 30px;
+  }
 }
 /* ===================================
    9. TESTIMONIAL SECTION
@@ -950,35 +948,42 @@ select:focus {
   padding: 14px 20px;
   border-radius: 25px;
   border: 1px solid #f5cba7;
+  font-size: 16px;
 }
 
+/* Updated Captcha Group Styling */
 .captcha-group {
-  display: flex;
-  border-radius: 25px;
-  overflow: hidden;
-  border: 1px solid #f5cba7;
+  position: relative;
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 .captcha-group input {
-  border: none;
-  padding: 2px 0px;
-  flex: 1;
-  text-align: left;
-
+  width: 100%;
+  padding: 14px 140px 14px 20px; /* Right padding for captcha space */
+  border-radius: 25px;
+  border: 1px solid #f5cba7;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .captcha-code {
+  position: absolute;
+  right: 2px;
+  top: 2px;
   background-color: #4a2c14;
   color: #fff;
   font-weight: bold;
-  padding: 14px 20px;
+  padding: 12px 20px;
+  border-radius: 0 23px 23px 0;
   display: flex;
-  text-align: left;
-  /* align-items: center;
-  justify-content: center; */
-  min-width: 80px;
+  align-items: center;
+  justify-content: center;
+  min-width: 10px;
+  height: calc(100% - 4px);
+  font-size: 16px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .checkbox-row {
@@ -1015,6 +1020,36 @@ select:focus {
 
 .submit-btn:hover {
   background-color: #e55a0d;
+}
+
+/* Responsive styles for captcha group */
+@media (max-width: 768px) {
+  .captcha-group input {
+    padding: 14px 130px 14px 15px; /* Adjusted padding for mobile */
+  }
+
+  .captcha-code {
+    min-width: 110px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group,
+  .captcha-group {
+    min-width: unset;
+  }
+
+  .captcha-group input {
+    padding: 12px 120px 12px 15px;
+  }
+
+  .captcha-code {
+    min-width: 100px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }
 
 /* ===================================
@@ -1176,7 +1211,6 @@ select:focus {
   border-bottom-left-radius: 50%;
   background-image: url(./assets/logo/google.png);
   background-size: cover;
-
 }
 
 .review-card img {
@@ -1598,7 +1632,7 @@ select {
   .brand-sub {
     font-size: 10px;
     letter-spacing: 3px;
-     text-align: right;
+    text-align: right;
   }
 
   .header-buttons {
