@@ -1,30 +1,4 @@
-/* ===================================
-   CSS STRUCTURE - CLOVE DENTAL WEBSITE
-   ===================================
-   
-   1. GLOBAL STYLES & RESET
-   2. LAYOUT & TYPOGRAPHY
-   3. HEADER SECTION
-   4. HERO SECTION
-   5. STATS SECTION
-   6. TREATMENTS SECTION
-   7. GALLERY SECTION
-   8. WHY CHOOSE SECTION
-   9. TESTIMONIAL SECTION
-   10. FORM SECTIONS
-   11. SAFETY & INNOVATION SECTION
-   12. REVIEWS SECTION
-   13. LOCATION SECTION
-   14. OFFER SECTION
-   15. FAQ SECTION
-   16. FOOTER SECTION
-   17. RESPONSIVE MEDIA QUERIES
-   
-   =================================== */
-
-/* ===================================
-   1. GLOBAL STYLES & RESET
-   =================================== */
+/* GLOBAL STYLES & RESET */
 
 * {
   margin: 0;
@@ -45,9 +19,7 @@ body {
   font-size: 16px;
 }
 
-/* ===================================
-   2. LAYOUT & TYPOGRAPHY
-   =================================== */
+/* LAYOUT & TYPOGRAPHY */
 
 .container {
   max-width: 1200px;
@@ -144,9 +116,7 @@ select:focus {
   border-color: #f26e21;
 }
 
-/* ===================================
-   3. HEADER SECTION
-   =================================== */
+/* HEADER SECTION */
 
 .header {
   display: flex;
@@ -187,11 +157,7 @@ select:focus {
   align-items: center;
 }
 
-/* ===================================
-   4. HERO SECTION
-   =================================== */
-
-/* Hero Section Styles */
+/* HERO SECTION */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -246,7 +212,6 @@ select:focus {
   font-size: 16px;
 }
 
-/* Captcha Row Styling */
 .captcha-row {
   display: flex;
   width: 100%;
@@ -280,7 +245,6 @@ select:focus {
   z-index: 1;
 }
 
-/* Terms Checkbox Styling */
 .terms-checkbox {
   display: flex;
   align-items: flex-start;
@@ -308,7 +272,6 @@ select:focus {
   text-decoration: underline;
 }
 
-/* Button Styling */
 #hero-appointment-form button {
   width: 100%;
   padding: 15px;
@@ -326,30 +289,27 @@ select:focus {
   background-color: #e08310;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .captcha-row {
     position: relative;
   }
 
   .captcha-input {
-    padding-right: 140px; /* Maintain space for captcha on mobile right side */
-    padding-left: 15px; /* Normal left padding */
+    padding-right: 140px;
+    padding-left: 15px;
   }
 
   .captcha-display {
     width: 120px;
     height: 48px;
     position: absolute;
-    right: 1px; /* Keep on right side for mobile */
+    right: 1px;
     top: 1px;
-    border-radius: 20px 25px 25px 20px; /* Maintain radius on mobile */
+    border-radius: 20px 25px 25px 20px;
   }
 }
 
-/* ===================================
-   5. STATS SECTION
-   =================================== */
+/* STATS SECTION */
 
 .stats-wrapper {
   overflow: hidden;
@@ -398,9 +358,7 @@ select:focus {
   }
 }
 
-/* ===================================
-   6. TREATMENTS SECTION
-   =================================== */
+/* TREATMENTS SECTION */
 
 .treatments-section {
   padding: 60px 0;
@@ -421,83 +379,6 @@ select:focus {
   margin: 0 auto 40px;
 }
 
-/* Treatment Cards Container */
-.treatments-section {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.treatments-section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.section-description {
-  font-size: 16px;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-/* Treatment Cards Container - HORIZONTAL LAYOUT */
-.treatments-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-/* Treatment Card Styles - HORIZONTAL LAYOUT */
-.treatments-section {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.treatments-section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.section-description {
-  font-size: 16px;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-/* Treatment Cards Container */
-.treatments-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-/* Treatments Section Styles */
-.treatments-section {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.treatments-section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.section-description {
-  font-size: 16px;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-/* Treatment Cards Container */
 .treatments-container {
   display: flex;
   justify-content: center;
@@ -506,7 +387,6 @@ select:focus {
   width: 100%;
 }
 
-/* Treatment Card Styles */
 .treatment-card {
   display: flex;
   width: calc(50% - 15px); /* 50% width minus half the gap */
@@ -564,7 +444,6 @@ select:focus {
   color: #333;
 }
 
-/* List Styles */
 .treatment-types {
   list-style-type: none;
   margin-bottom: 15px;
@@ -584,7 +463,6 @@ select:focus {
   color: #333;
 }
 
-/* Price Styles */
 .price-info {
   margin: 15px 0 10px;
 }
@@ -623,7 +501,6 @@ select:focus {
   background-color: #e08310;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
   .treatment-card {
     width: 100%;
@@ -676,9 +553,7 @@ select:focus {
     padding: 10px;
   }
 }
-/* ===================================
-   7. GALLERY SECTION
-   =================================== */
+/* GALLERY SECTION */
 
 .gallery-section {
   padding: 10px 20px;
@@ -738,9 +613,7 @@ select:focus {
   font-size: 16px;
 }
 
-/* ===================================
-   8. WHY CHOOSE SECTION
-   =================================== */
+/* WHY CHOOSE SECTION */
 
 .clove-container {
   max-width: 1200px;
@@ -756,7 +629,6 @@ select:focus {
   margin-top: 30px;
 }
 
-/* Header section for title and description */
 .clove-header-section {
   text-align: center;
   width: 100%;
@@ -764,7 +636,6 @@ select:focus {
   padding: 0 20px; /* Add padding for better centering */
 }
 
-/* Content section with image and list side by side */
 .clove-content-section {
   display: flex;
   flex-direction: row;
@@ -829,7 +700,7 @@ select:focus {
   flex: 1;
   display: flex;
   justify-content: center;
-  /* Remove order: -1 so image stays on right side naturally */
+
   padding-left: 20px; /* Image on right side, so padding-left for spacing */
 }
 
@@ -861,21 +732,17 @@ select:focus {
     gap: 30px;
     margin-top: 10px;
   }
-
   .clove-info-section {
-    padding-right: 0; /* Remove padding on mobile */
-    order: 1; /* List comes first on mobile */
+    padding-right: 0;
+    order: 1;
   }
-
   .clove-visual-section {
-    order: 2; /* Image comes second on mobile */
-    padding-left: 0; /* Remove padding on mobile */
+    order: 2;
+    padding-left: 0;
     margin-bottom: 0;
   }
 }
-/* ===================================
-   9. TESTIMONIAL SECTION
-   =================================== */
+/* TESTIMONIAL SECTION */
 
 .testimonial-section {
   max-width: 1300px;
@@ -943,7 +810,6 @@ select:focus {
   color: #f26e21;
 }
 
-/* Hide scrollbar */
 .testimonial-scroll-container::-webkit-scrollbar {
   display: none;
 }
@@ -953,9 +819,7 @@ select:focus {
   scrollbar-width: none;
 }
 
-/* ===================================
-   10. FORM SECTIONS
-   =================================== */
+/* FORM SECTIONS */
 
 .form-container {
   background-color: #fff8f2;
@@ -996,7 +860,6 @@ select:focus {
   font-size: 16px;
 }
 
-/* Updated Captcha Group Styling */
 .captcha-group {
   position: relative;
   flex: 1;
@@ -1067,7 +930,6 @@ select:focus {
   background-color: #e55a0d;
 }
 
-/* Responsive styles for captcha group */
 @media (max-width: 768px) {
   .captcha-group input {
     padding: 14px 130px 14px 15px; /* Adjusted padding for mobile */
@@ -1097,9 +959,7 @@ select:focus {
   }
 }
 
-/* ===================================
-   11. SAFETY & INNOVATION SECTION
-   =================================== */
+/* SAFETY & INNOVATION SECTION */
 
 .safety-section {
   padding: 10px 20px;
@@ -1182,9 +1042,7 @@ select:focus {
   background: #4a2c1c;
 }
 
-/* ===================================
-   12. REVIEWS SECTION
-   =================================== */
+/* REVIEWS SECTION */
 
 .reviews-section {
   background-color: #fff7f3;
@@ -1285,9 +1143,7 @@ select:focus {
   text-align: center;
 }
 
-/* ===================================
-   13. LOCATION SECTION
-   =================================== */
+/* LOCATION SECTION */
 
 .location-section {
   padding: 10px 20px;
@@ -1366,9 +1222,7 @@ select:focus {
   object-fit: cover;
 }
 
-/* ===================================
-   14. OFFER SECTION
-   =================================== */
+/* OFFER SECTION */
 
 .offer-section {
   display: flex;
@@ -1511,9 +1365,7 @@ select:focus {
   float: right;
 }
 
-/* ===================================
-   15. FAQ SECTION
-   =================================== */
+/* FAQ SECTION */
 
 .faq-section {
   max-width: 1200px;
@@ -1556,9 +1408,7 @@ select:focus {
   font-weight: bold;
 }
 
-/* ===================================
-   16. FOOTER SECTION
-   =================================== */
+/* FOOTER SECTION */
 
 .footer {
   background-color: #44240a;
@@ -1611,11 +1461,7 @@ select:focus {
   color: #ddd;
 }
 
-/* ===================================
-   17. RESPONSIVE MEDIA QUERIES
-   =================================== */
-
-/* Mobile-first responsive design */
+/* RESPONSIVE MEDIA QUERIES */
 input,
 textarea,
 select {
@@ -1632,7 +1478,6 @@ select {
   }
 }
 
-/* Large Screens */
 @media (min-width: 1200px) {
   .container,
   .section {
@@ -1641,7 +1486,6 @@ select {
   }
 }
 
-/* Tablet Landscape */
 @media (min-width: 769px) and (max-width: 1024px) {
   .header {
     padding: 20px 30px;
@@ -1660,9 +1504,7 @@ select {
   }
 }
 
-/* Tablet Portrait & Mobile */
 @media (max-width: 768px) {
-  /* Header Responsive */
   .header {
     flex-direction: column;
     padding: 15px 20px;
@@ -1693,7 +1535,6 @@ select {
     padding: 12px 20px;
   }
 
-  /* Hero Section */
   .hero {
     flex-direction: column;
     padding: 15px;
@@ -1705,7 +1546,6 @@ select {
     max-width: 100%;
   }
 
-  /* Treatments Section */
   .treatments-container {
     flex-direction: column;
     align-items: center;
@@ -1717,7 +1557,6 @@ select {
     max-width: 350px;
   }
 
-  /* Stats Section */
   .stats-wrapper {
     padding: 15px 0;
   }
@@ -1735,7 +1574,6 @@ select {
     font-size: 24px;
   }
 
-  /* Gallery Section */
   .gallery {
     gap: 20px;
   }
@@ -1749,7 +1587,6 @@ select {
     height: 100px;
   }
 
-  /* Why Choose Section */
   .choose-section {
     flex-direction: column;
     padding: 40px 20px;
@@ -1764,7 +1601,6 @@ select {
     text-align: center;
   }
 
-  /* Testimonial Section */
   .testimonial-cards {
     gap: 15px;
   }
@@ -1773,7 +1609,6 @@ select {
     width: 180px;
   }
 
-  /* Form Container */
   .form-container {
     margin: 20px auto;
     padding: 20px 15px;
@@ -1792,7 +1627,6 @@ select {
     min-width: unset;
   }
 
-  /* Safety Section */
   .card-container {
     gap: 15px;
   }
@@ -1802,7 +1636,6 @@ select {
     height: 320px;
   }
 
-  /* Reviews Section */
   .reviews-container {
     flex-direction: column;
     align-items: center;
@@ -1815,7 +1648,6 @@ select {
     max-width: 280px;
   }
 
-  /* Location Section */
   .location-content {
     flex-direction: column;
   }
@@ -1842,12 +1674,10 @@ select {
     min-width: unset;
   }
 
-  /* FAQ Section */
   .faq-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Footer */
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -1864,13 +1694,11 @@ select {
   }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
   }
 
-  /* Header */
   .header {
     padding: 10px 15px;
   }
@@ -1885,7 +1713,6 @@ select {
     letter-spacing: 2px;
   }
 
-  /* Hero */
   .hero {
     padding: 10px;
   }
@@ -1894,7 +1721,6 @@ select {
     padding: 15px;
   }
 
-  /* Typography */
   .section h2 {
     font-size: 20px;
   }
@@ -1907,7 +1733,6 @@ select {
     font-size: 20px;
   }
 
-  /* Treatments */
   .treatment-card {
     width: 95%;
     padding: 15px;
@@ -1921,7 +1746,6 @@ select {
     font-size: 18px;
   }
 
-  /* Stats */
   .stat {
     min-width: 100px;
     font-size: 10px;
@@ -1931,7 +1755,6 @@ select {
     font-size: 20px;
   }
 
-  /* Gallery */
   .gallery {
     flex-direction: column;
     align-items: center;
@@ -1947,7 +1770,6 @@ select {
     height: 120px;
   }
 
-  /* Testimonials */
   .testimonial-card {
     width: 160px;
   }
@@ -1965,7 +1787,6 @@ select {
     font-size: 12px;
   }
 
-  /* Forms */
   .form-container {
     margin: 15px auto;
     padding: 15px 10px;
@@ -1982,7 +1803,6 @@ select {
     gap: 5px;
   }
 
-  /* Cards */
   .card {
     width: 90%;
     max-width: 300px;
@@ -2001,7 +1821,6 @@ select {
     font-size: 13px;
   }
 
-  /* Reviews */
   .review-summary,
   .review-card {
     width: 95%;
@@ -2015,7 +1834,6 @@ select {
     font-size: 16px;
   }
 
-  /* Offer Section */
   .offer-section {
     padding: 20px 10px;
   }
@@ -2028,7 +1846,6 @@ select {
     font-size: 18px;
   }
 
-  /* Buttons */
   .btn-orange,
   .btn-white,
   .consultation-btn,
@@ -2038,7 +1855,6 @@ select {
   }
 }
 
-/* High DPI Displays */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .treatment-card img,
   .patient-card img,
@@ -2048,7 +1864,6 @@ select {
   }
 }
 
-/* Accessibility - Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .stats {
     animation: none;
